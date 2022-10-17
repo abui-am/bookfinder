@@ -1,6 +1,6 @@
 import Carousel from 'react-multi-carousel';
 
-const MultiCarousel = ({ children }) => {
+const MultiCarousel = ({ children }: { children: JSX.Element[] }) => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -18,7 +18,7 @@ const MultiCarousel = ({ children }) => {
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 2,
-      partialVisibilityGutter: children.length > 1 ? 20 : 0,
+      partialVisibilityGutter: children?.length > 1 ? 20 : 0,
     },
   };
   return (
