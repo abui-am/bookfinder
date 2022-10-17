@@ -7,7 +7,7 @@ import { FindVolumeByIdResponse } from '@/typings/books';
 
 const BookById = () => {
   const { query } = useRouter();
-  const [data, setData] = useState<FindVolumeByIdResponse>({});
+  const [data, setData] = useState<FindVolumeByIdResponse>({} as FindVolumeByIdResponse);
 
   useEffect(() => {
     initialFetch();

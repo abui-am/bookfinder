@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TextField should render EndIcon when given 1`] = `
+<div
+  class="text-gray-600"
+>
+  Testingssssssssssssss
+</div>
+`;
+
+exports[`TextField should render snapshop 1`] = `
+<div
+  aria-label="testing"
+>
+  <div
+    class="relative"
+  >
+    <input
+      class="border-gray-300 border h-11 w-full rounded-full px-3 outline-none focus:ring-blue-600 focus:ring-inset focus:border-transparent focus:outline-none focus:ring-2 transition-all duration-150 ease-in"
+    />
+  </div>
+</div>
+`;

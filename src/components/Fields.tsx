@@ -1,3 +1,4 @@
+/* eslint-disable import/prefer-default-export */
 import clsx from 'clsx';
 import { cloneElement, DetailedHTMLProps, InputHTMLAttributes } from 'react';
 

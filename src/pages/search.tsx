@@ -3,11 +3,12 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 import volume from '@/api/books';
-import { useKeyPressEnter } from '@/hooks/onKeyPress';
+import Title from '@/components/title/Title';
 import { Item } from '@/typings/books';
 
 const Home: NextPage = () => {
   const { query } = useRouter();
+
   const [data, setData] = useState<Item[]>([]);
 
   useEffect(() => {
@@ -58,18 +59,6 @@ const Home: NextPage = () => {
           </div>
         );
       })}
-    </div>
-  );
-};
-
-const Title: React.FC<{ itemId: string; title: string }> = ({ itemId, title }) => {
-  const router = useRouter();
-  const handleKeyPress = useKeyPressEnter(() => {
-    router.push(`/books/${itemId}`);
-  });
-  return (
-    <div role="button" tabIndex={0} onKeyPress={handleKeyPress} onClick={() => router.push(`/books/${itemId}`)}>
-      <h2 className="text-lg mb-2 font-bold text-gray-900 hover:text-indigo-600 cursor-pointer">{title}</h2>
     </div>
   );
 };

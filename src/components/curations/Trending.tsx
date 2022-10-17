@@ -1,6 +1,7 @@
 import trending from '@/constants/trending';
 
 import MultiCarousel from '../carousel/Carousel';
+import Title from '../title/Title';
 
 const TrendingCuration = () => {
   return (
@@ -9,7 +10,7 @@ const TrendingCuration = () => {
 
       <div className="-mx-2">
         <MultiCarousel>
-          {trending.items.map(({ volumeInfo }) => {
+          {trending.items.map(({ volumeInfo, id }) => {
             return (
               <div className="px-2" key={volumeInfo.title}>
                 <img
@@ -18,7 +19,7 @@ const TrendingCuration = () => {
                   alt={volumeInfo.title}
                 />
                 <div className="mt-2">
-                  <h2 className="font-bold">{volumeInfo.title}</h2>
+                  <Title itemId={id} title={volumeInfo.title} />
                   <h3 className="text-sm">{volumeInfo.subtitle}</h3>
                 </div>
               </div>
